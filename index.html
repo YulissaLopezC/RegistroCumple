@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="./js/mostrarDatos.js"></script>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <form id="miForm" class="contenedor">
+        <ul>
+            <li>
+                <label for="nombre">Nombre <span aria-label="required">*</span></label>
+                <input type="text" id="nombre" name="usu_name" required>
+            </li>
+            <li>
+                <label for="fecha">Fecha <span aria-label="required">*</span></label>
+                <input type="text"
+                 id="fecha" 
+                 name="usu_fecha"
+                required
+                placeholder="DD/MM"
+                pattern="^([0-9]{2}\/[0-9]{2})$">
+            </li>
+            <li>
+                <label for="regalo">Regalo <span aria-label="required">*</span></label>
+                <input type="text" id="regalo" name="usu_regalo" required>
+            </li>
+            <li>
+                <button type="submit">Registrar</button>
+                <button type="button" id="btnDel">Eliminar</button>
+            </li>
+        </ul>
+    </form>
+
+
+    <!-- tabla -->
+    <table id="tabla" border="2px">
+        <thead>
+            <th>Nombre</th>
+            <th>Fecha de cumple</th>
+            <th>Regalo</th>
+        </thead>
+        <tbody id="bodyData"></tbody>
+    </table>
+</body>
+</html>
